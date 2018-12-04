@@ -1,6 +1,6 @@
-对**MOEA/D: A Multiobjective Evolutionary Algorithm Based on Decomposition**论文中算法编程实现。
+对**[MOEA/D: A Multiobjective Evolutionary Algorithm Based on Decomposition](https://ieeexplore.ieee.org/document/4358754)**论文中算法编程实现。
 
-[GitHub链接：https://github.com/425776024/MOEAD/edit/master/README.md](https://github.com/425776024/MOEAD/edit/master/README.md)
+[GitHub链接：https://github.com/425776024/MOEAD](https://github.com/425776024/MOEAD)
 
 **结构：**
 problem：求解问题函数目录

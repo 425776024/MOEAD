@@ -10,8 +10,7 @@ Bound = [0, 1]
 
 
 def Func(X):
-    if X.shape[0] < 2:
-        return -1
+
     f1 = F1(X)
     gx = g(X)
     f2 = F2(gx, X)

@@ -3,10 +3,10 @@ import numpy as np
 
 class Mean_vector:
     # 对m维空间，目标方向个数H
-    def __init__(self, H=5, m=3, name='out.csv'):
+    def __init__(self, H=5, m=3, path='out.csv'):
         self.H = H
         self.m = m
-        self.name = name
+        self.path = path
         self.stepsize = 1 / H
 
     def perm(self, sequence):
@@ -54,7 +54,7 @@ class Mean_vector:
 
     def save_mv_to_file(self, mv):
         f = np.array(mv, dtype=np.float64)
-        np.savetxt(fname=self.name, X=f)
+        np.savetxt(fname=self.path, X=f)
 
     def generate(self):
         m_v = self.get_mean_vectors()

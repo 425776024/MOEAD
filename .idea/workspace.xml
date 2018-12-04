@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f800aaef-0638-4919-88cc-8a45a3a11ea4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MOEAD_Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/MOEAD_Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/M_V.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mean_Vector_Util.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mean_Vector_Util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kur.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem/DTLZ1.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/DTLZ1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem/ZDT1.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/ZDT1.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1032117867">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="24" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.3" value="5" />
+          <entry key="project.open.time.4" value="12" />
+          <entry key="project.open.time.5" value="3" />
+          <entry key="project.opened" value="25" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cpp" value="2" />
+          <entry key="csv" value="85" />
+          <entry key="py" value="173" />
+          <entry key="pyi" value="1" />
+          <entry key="text" value="15" />
+          <entry key="txt" value="20" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="C++" value="2" />
+          <entry key="PLAIN_TEXT" value="120" />
+          <entry key="Python" value="173" />
+          <entry key="PythonStub" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="9" />
+          <entry key="py" value="10678" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="Python" value="10678" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MOEAD_Main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-133">
+              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#686#690#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MOEAD_Utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-140">
+              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+              <folding>
+                <element signature="e#122#462#0" />
+                <element signature="e#239#370#0" />
+                <element signature="e#782#1151#0" />
+                <element signature="e#1190#1459#0" />
+                <element signature="e#1292#1459#0" />
+                <element signature="e#1500#2029#0" />
+                <element signature="e#2065#2220#0" />
+                <element signature="e#2321#2570#0" />
+                <element signature="e#2623#2855#0" />
+                <element signature="e#2897#3210#0" />
+                <element signature="e#3259#4190#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GA_Utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="139" column="21" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
+              <folding>
+                <element signature="e#123#277#0" />
+                <element signature="e#306#613#0" />
+                <element signature="e#366#411#0" />
+                <element signature="e#458#548#0" />
+                <element signature="e#645#822#0" />
+                <element signature="e#689#808#0" />
+                <element signature="e#869#1072#0" />
+                <element signature="e#1102#1758#0" />
+                <element signature="e#1308#1739#0" />
+                <element signature="e#1684#1739#0" />
+                <element signature="e#1800#2964#0" />
+                <element signature="e#1913#2436#0" />
+                <element signature="e#2479#2946#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>EP</find>
+      <find>del</find>
+      <find>self.m</find>
+      <find>Creat_Pop</find>
+      <find>Pop</find>
+      <find>cpt_EP</find>
+      <find>cro</find>
+      <find>cros</find>
+      <find>EO</find>
+      <find>shw</find>
+      <find>EP_X</find>
+      <find>upd</find>
+      <find>update_EP</find>
+      <find>cross_mutation</find>
+      <find>generate_next</find>
+      <find>fig</find>
+      <find>self.</find>
+      <find>Test_fun</find>
+      <find>gene</find>
+      <find>utils.</find>
+      <find>ini_Z</find>
+      <find>cross</find>
+      <find>is_dominate</find>
+      <find>Creat_child</find>
+      <find>cpt_tchbycheff</find>
+      <find>update_BTX</find>
+      <find>update_EP_By_Y</find>
+      <find>update_Z</find>
+      <find>Tchebycheff_dist</find>
+      <find>self</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>moead.Test_fun.</replace>
+      <replace>moead</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/MOEAD.py" />
+        <option value="$PROJECT_DIR$/DBG/DW.py" />
+        <option value="$PROJECT_DIR$/DBG/Show.py" />
+        <option value="$PROJECT_DIR$/other/m_vector.py" />
+        <option value="$PROJECT_DIR$/DBG/aa.py" />
+        <option value="$PROJECT_DIR$/DBG/m_vector.py" />
+        <option value="$PROJECT_DIR$/src/Mean_Vector.py" />
+        <option value="$PROJECT_DIR$/src/test.text" />
+        <option value="$PROJECT_DIR$/src/Show.py" />
+        <option value="$PROJECT_DIR$/src/problem/ZDT2.py" />
+        <option value="$PROJECT_DIR$/src/problem/ZDT4.py" />
+        <option value="$PROJECT_DIR$/src/problem/SCH.py" />
+        <option value="$PROJECT_DIR$/src/problem/KUR.py" />
+        <option value="$PROJECT_DIR$/src/M.py" />
+        <option value="$PROJECT_DIR$/src/MOEAD_Main_V1.py" />
+        <option value="$PROJECT_DIR$/src/MOEAD_Main_V2.py" />
+        <option value="$PROJECT_DIR$/src/MOEAD_Main_V3.py" />
+        <option value="$PROJECT_DIR$/src/Mean_Vector_Util_T.py" />
+        <option value="$PROJECT_DIR$/src/MOEAD_Main_V6.py" />
+        <option value="$PROJECT_DIR$/src/problem/ZDT1.py" />
+        <option value="$PROJECT_DIR$/src/zdt2.csv" />
+        <option value="$PROJECT_DIR$/src/MOEAD_Main_GOOD.py" />
+        <option value="$PROJECT_DIR$/src/Mean_Vector_Util.py" />
+        <option value="$PROJECT_DIR$/src/Utils.py" />
+        <option value="$PROJECT_DIR$/src/Draw_Utils.py" />
+        <option value="$PROJECT_DIR$/src/problem/DTLZ1.py" />
+        <option value="$PROJECT_DIR$/src/GA_Utils.py" />
+        <option value="$PROJECT_DIR$/src/MOEAD_Utils.py" />
+        <option value="$PROJECT_DIR$/src/MOEAD_Main.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="65" />
+    <option name="y" value="25" />
+    <option name="width" value="1855" />
+    <option name="height" value="1055" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MOEAD_Jiang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MOEAD_Jiang" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MOEAD_Jiang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MOEAD_Jiang" type="462c0819:PsiDirectoryNode" />
+              <item name="DBG" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MOEAD_Jiang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MOEAD_Jiang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MOEAD_Jiang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MOEAD_Jiang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="problem" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/TSP-GA-py" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Windows\GitHub\MOEAD_Jiang\src\vector_csv_file" />
+      <recent name="D:\Windows\GitHub\MOEAD_Jiang\src\temp_mead" />
+      <recent name="D:\Windows\GitHub\MOEAD_Jiang\src" />
+      <recent name="D:\Windows\GitHub\MOEAD_Jiang\DBG" />
+      <recent name="D:\Windows\GitHub\MOEAD_Jiang\other" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Windows\GitHub\MOEAD_Jiang\src" />
+      <recent name="D:\Windows\GitHub\MOEAD_Jiang\src\problem" />
+      <recent name="D:\Windows\GitHub\MOEAD_Jiang\DBG" />
+      <recent name="D:\Windows\GitHub\MOEAD_Jiang" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.MOEAD_Main">
+    <configuration name="MOEAD_Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MOEAD_Jiang" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/MOEAD_Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MOEAD_Main_GOOD" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MOEAD_Jiang" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/MOEAD_Main_GOOD.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MOEAD_Main_T" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MOEAD_Jiang" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\Windows\GitHub\MOEAD_Jiang\src\temp_mead\MOEAD_Main_T.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MOEAD_Main_V6" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MOEAD_Jiang" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\Windows\GitHub\MOEAD_Jiang\src\temp_mead\MOEAD_Main_V6.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Mean_Vector_Util_T" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MOEAD_Jiang" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\Windows\GitHub\MOEAD_Jiang\src\temp_mead\MOEAD_Main_T.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.MOEAD_Main" />
+      <item itemvalue="Python.Mean_Vector_Util_T" />
+      <item itemvalue="Python.MOEAD_Main_T" />
+      <item itemvalue="Python.MOEAD_Main_V6" />
+      <item itemvalue="Python.MOEAD_Main_GOOD" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.MOEAD_Main" />
+        <item itemvalue="Python.MOEAD_Main_GOOD" />
+        <item itemvalue="Python.MOEAD_Main_V6" />
+        <item itemvalue="Python.MOEAD_Main_T" />
+        <item itemvalue="Python.Mean_Vector_Util_T" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f800aaef-0638-4919-88cc-8a45a3a11ea4" name="Default Changelist" comment="" />
+      <created>1542895292294</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542895292294</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32841823" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.31586403" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49865952" weight="0.5311615" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5013405" side_tool="true" weight="0.4016973" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Packages" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25871313" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.407355" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Packages" order="4" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/MOEAD_Utils.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://D:/Anaconda3/Lib/site-packages/matplotlib/axes/_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-97">
+          <caret line="1887" lean-forward="true" selection-start-line="1887" selection-end-line="1887" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBG/weight.txt" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/itertools.pyi">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBG/aa.py" />
+    <entry file="file://$PROJECT_DIR$/DBG/out.txt" />
+    <entry file="file://$PROJECT_DIR$/DBG/out.csv" />
+    <entry file="file://$PROJECT_DIR$/DBG/m_vector.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-2036615904/itertools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-422">
+          <caret line="462" column="18" selection-start-line="462" selection-start-column="6" selection-end-line="462" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/out.csv" />
+    <entry file="file://D:/Anaconda3/Lib/site-packages/numpy/lib/npyio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="745" selection-start-line="745" selection-end-line="745" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.text" />
+    <entry file="file://D:/Anaconda3/Lib/site-packages/pandas/io/parsers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="685" column="17" selection-start-line="685" selection-start-column="17" selection-end-line="685" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/Lib/site-packages/numpy/lib/_datasource.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="617" selection-start-line="617" selection-end-line="617" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="331" selection-start-line="331" selection-end-line="331" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Show.py" />
+    <entry file="file://$PROJECT_DIR$/src/test.csv" />
+    <entry file="file://$PROJECT_DIR$/other/MOEAD.py" />
+    <entry file="file://$PROJECT_DIR$/src/vector_csv_file/kur.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1639" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBG/DW.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/M_V.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/vector_csv_file/sch.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/M.py" />
+    <entry file="file://$PROJECT_DIR$/src/problem/KUR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/SCH.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/ZDT4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-152">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MOEAD_Main_V2.py" />
+    <entry file="file://$PROJECT_DIR$/src/MOEAD_Main_V3.py" />
+    <entry file="file://$PROJECT_DIR$/src/temp_mead/MOEAD_Main_V5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2565">
+          <caret line="148" column="17" selection-start-line="148" selection-start-column="17" selection-end-line="148" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/temp_mead/MOEAD_Main_T.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="258" column="27" lean-forward="true" selection-start-line="258" selection-start-column="27" selection-end-line="258" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/temp_mead/MOEAD_Main_V7.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-2036615904/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="224" column="4" selection-start-line="224" selection-start-column="4" selection-end-line="224" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/temp_mead/MOEAD_Main_V6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="180" column="3" lean-forward="true" selection-start-line="180" selection-start-column="3" selection-end-line="200" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/ZDT1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/temp_mead/MOEAD_Main_GOOD.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/temp_mead/MOEAD_Main_BEST_V1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="263" lean-forward="true" selection-start-line="263" selection-end-line="276" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/temp_mead/MOEAD_Main_BEST.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="90" column="25" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="90" selection-end-column="25" />
+          <folding>
+            <element signature="e#8842#10221#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MOEAD_Main_GOOD.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4864">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vector_csv_file/zdt2.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-629">
+          <caret selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/temp_mead/MOEAD_Main_V4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="136" column="21" lean-forward="true" selection-start-line="105" selection-start-column="7" selection-end-line="136" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mean_Vector_Util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="60" column="17" lean-forward="true" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vector_csv_file/dtlz1.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3504" />
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/Lib/site-packages/mpl_toolkits/mplot3d/axes3d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="86" column="13" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Draw_Utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="85" column="74" lean-forward="true" selection-start-line="85" selection-start-column="74" selection-end-line="85" selection-end-column="74" />
+          <folding>
+            <element signature="e#1524#2706#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/DTLZ1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/temp_mead/MOEAD_Main_V1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/ZDT2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-83">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vector_csv_file/zdt1.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1351">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MOEAD_Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#686#690#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MOEAD_Utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-140">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding>
+            <element signature="e#122#462#0" />
+            <element signature="e#239#370#0" />
+            <element signature="e#782#1151#0" />
+            <element signature="e#1190#1459#0" />
+            <element signature="e#1292#1459#0" />
+            <element signature="e#1500#2029#0" />
+            <element signature="e#2065#2220#0" />
+            <element signature="e#2321#2570#0" />
+            <element signature="e#2623#2855#0" />
+            <element signature="e#2897#3210#0" />
+            <element signature="e#3259#4190#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GA_Utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="139" column="21" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
+          <folding>
+            <element signature="e#123#277#0" />
+            <element signature="e#306#613#0" />
+            <element signature="e#366#411#0" />
+            <element signature="e#458#548#0" />
+            <element signature="e#645#822#0" />
+            <element signature="e#689#808#0" />
+            <element signature="e#869#1072#0" />
+            <element signature="e#1102#1758#0" />
+            <element signature="e#1308#1739#0" />
+            <element signature="e#1684#1739#0" />
+            <element signature="e#1800#2964#0" />
+            <element signature="e#1913#2436#0" />
+            <element signature="e#2479#2946#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

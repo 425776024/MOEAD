@@ -117,7 +117,16 @@ def update_BTX(moead, P_B, Y):
         d_y = cpt_tchbycheff(moead, j, Y)
         if d_y < d_x:
             moead.Pop[j] = Y[:]
-            moead.Pop_FV[j] = moead.Test_fun.Func(Y)
+            F_Y = moead.Test_fun.Func(Y)
+            moead.Pop_FV[j] = F_Y
+            update_EP_By_ID(moead, j, F_Y)
+
+
+def update_EP_By_ID(moead, id, F_Y):
+    # 如果id存在，则更新其对应函数集合的值
+    if id in moead.EP_X_ID:
+        position_pi = moead.EP_X_ID.index(id)
+        moead.EP_X_FV[position_pi][:] = F_Y[:]
 
 
 # 根据Y更新Z坐标

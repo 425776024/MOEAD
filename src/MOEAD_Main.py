@@ -17,14 +17,13 @@ class MOEAD:
     # 0最小化，1最大化
     problem_type = 0
     # problem_type=1
-    Test_fun = dtlz1
-    name = 'dtlz1'
+    Test_fun = zdt2
+    name = 'zdt2'
     Pop_size = -1
     max_gen = 100
-    T_size = 20
-
+    T_size = 30
     # popsize
-    h = 20
+    h = 200
     # m = 2
     EP_X_ID = []
     EP_X_FV = []

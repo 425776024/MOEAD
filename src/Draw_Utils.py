@@ -2,6 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
+'''
+绘图工具包
+'''
+
 fig = plt.figure()
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
 ax = 0
@@ -13,14 +17,14 @@ def show():
 
 def draw_MOEAD_Pareto(moead,name):
     Pareto_F_Data = moead.EP_X_FV
-    # Pop_F_Data = moead.Pop_FV
+    Pop_F_Data = moead.Pop_FV
 
     Len = len(Pareto_F_Data[0])
     if Len == 2:
         r_x = Pareto_F_Data[0][:]
         r_y = Pareto_F_Data[0][:]
-        # for pp in Pop_F_Data:
-        #     plt.scatter(pp[0], pp[1], c='black', s=5)
+        for pp in Pop_F_Data:
+            plt.scatter(pp[0], pp[1], c='black', s=5)
         for p in Pareto_F_Data:
             if p[0] < r_x[0]:
                 r_x[0] = p[0]
@@ -44,8 +48,8 @@ def draw_MOEAD_Pareto(moead,name):
         ax.set_xlabel('Function 1')
         ax.set_ylabel('Function 2')
         ax.set_zlabel('Function 3')
-        # for pp in Pop_F_Data:
-        #     ax.scatter(pp[0], pp[1], pp[2], c='black', s=5)
+        for pp in Pop_F_Data:
+            ax.scatter(pp[0], pp[1], pp[2], c='black', s=5)
         for p in Pareto_F_Data:
             ax.scatter(p[0], p[1], p[2], c='red', s=10)
         # ax.set_xlim([0,2])

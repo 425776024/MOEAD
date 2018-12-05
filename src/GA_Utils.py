@@ -2,6 +2,9 @@ import numpy as np
 import src.MOEAD_Utils as moead_utils
 import src.Draw_Utils as draw_utils
 
+'''
+遗传算法工具包
+'''
 
 def Creat_child(moead):
     child = moead.Test_fun.Bound[0] + (moead.Test_fun.Bound[1] - moead.Test_fun.Bound[0]) * np.random.rand(

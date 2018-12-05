@@ -3,7 +3,9 @@ from math import sqrt
 
 import numpy as np
 from src.Mean_Vector_Util import Mean_vector
-
+'''
+MOEAD工具包
+'''
 
 def Load_W(moead):
     file = moead.name + '.csv'

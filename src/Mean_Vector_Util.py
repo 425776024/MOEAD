@@ -1,5 +1,8 @@
 import numpy as np
 
+'''
+求解均值向量
+'''
 
 class Mean_vector:
     # 对m维空间，目标方向个数H

@@ -21,7 +21,7 @@ class MOEAD:
     name = 'zdt2'
     Pop_size = -1
     max_gen = 100
-    T_size = 30
+    T_size = 20
     # popsize
     h = 200
     # m = 2
@@ -37,13 +37,14 @@ class MOEAD:
     Z = []
     csv_file_path = 'vector_csv_file'
     # 当前迭代代数
-    gen=0
+    gen = 0
     # 是否动态展示
-    need_dinamic=False
+    need_dinamic = False
+
     # need_dinamic=True
 
     def __init__(self):
-        pass
+        self.Init_data()
 
     def Init_data(self):
         utils.Load_W(self)
@@ -58,7 +59,6 @@ class MOEAD:
         utils.show()
 
     def run(self):
-        self.Init_data()
         t = time.time()
         EP_X_ID = utils.envolution(self)
         dt = time.time() - t

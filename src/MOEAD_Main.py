@@ -20,10 +20,10 @@ class MOEAD:
     Test_fun = zdt2
     name = 'zdt2'
     Pop_size = -1
-    max_gen = 100
-    T_size = 20
+    max_gen = 30
+    T_size =20
     # popsize
-    h = 200
+    h = 100
     # m = 2
     EP_X_ID = []
     EP_X_FV = []
@@ -40,7 +40,6 @@ class MOEAD:
     gen = 0
     # 是否动态展示
     need_dinamic = False
-
     # need_dinamic=True
 
     def __init__(self):
@@ -50,8 +49,8 @@ class MOEAD:
         utils.Load_W(self)
         utils.cpt_W_Bi_T(self)
         utils.Creat_Pop(self)
-        utils.cpt_EP(self)
         utils.cpt_Z(self)
+        # utils.cpt_Z2(self)
 
     def show(self):
         # utils.draw_W(self)
@@ -60,9 +59,11 @@ class MOEAD:
 
     def run(self):
         t = time.time()
+        print('Z:',self.Z)
         EP_X_ID = utils.envolution(self)
         dt = time.time() - t
         print("PE size:%s,used time:%s s" % (len(EP_X_ID), dt))
+        print('Z:',self.Z)
         self.show()
 
 

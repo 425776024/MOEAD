@@ -3,9 +3,11 @@ from math import sqrt
 
 import numpy as np
 from src.Mean_Vector_Util import Mean_vector
+
 '''
 MOEAD工具包
 '''
+
 
 def Load_W(moead):
     file = moead.name + '.csv'
@@ -35,8 +37,24 @@ def cpt_Z(moead):
     return Z
 
 
+def cpt_Z2(moead):
+    # 初始化Z集，最小问题0,0，..
+    Z = moead.Pop_FV[0][:]
+    dz = np.random.rand()
+    for fi in range(moead.Test_fun.Func_num):
+        for Fpi in moead.Pop_FV:
+            if moead.problem_type == 0:
+                if Fpi[fi] < Z[fi]:
+                    Z[fi] = Fpi[fi] - dz
+            if moead.problem_type == 1:
+                if Fpi[fi] > Z[fi]:
+                    Z[fi] = Fpi[fi] + dz
+    moead.Z = Z
+    return Z
+
+
 # 计算初始化前沿
-def cpt_EP(moead):
+def init_EP(moead):
     for pi in range(moead.Pop_size):
         np = 0
         F_V_P = moead.Pop_FV[pi]
@@ -117,7 +135,7 @@ def update_BTX(moead, P_B, Y):
         Xj = moead.Pop[j]
         d_x = cpt_tchbycheff(moead, j, Xj)
         d_y = cpt_tchbycheff(moead, j, Y)
-        if d_y < d_x:
+        if d_y <= d_x:
             moead.Pop[j] = Y[:]
             F_Y = moead.Test_fun.Func(Y)
             moead.Pop_FV[j] = F_Y
@@ -133,14 +151,15 @@ def update_EP_By_ID(moead, id, F_Y):
 
 # 根据Y更新Z坐标
 def update_Z(moead, Y):
+    dz =   np.random.rand()
     F_y = moead.Test_fun.Func(Y)
     for j in range(moead.Test_fun.Func_num):
         if moead.problem_type == 0:  # minimize
             if moead.Z[j] > F_y[j]:
-                moead.Z[j] = F_y[j]
+                moead.Z[j] = F_y[j] - dz
         if moead.problem_type == 1:  # maximize
             if moead.Z[j] < F_y[j]:
-                moead.Z[j] = F_y[j]
+                moead.Z[j] = F_y[j] + dz
 
 
 # 根据Y更新前沿

@@ -15,17 +15,19 @@ def show():
     plt.show()
 
 
-def draw_MOEAD_Pareto(moead,name):
+def draw_MOEAD_Pareto(moead, name):
     Pareto_F_Data = moead.EP_X_FV
+    Pareto_F_ID = moead.EP_X_ID
     Pop_F_Data = moead.Pop_FV
 
     Len = len(Pareto_F_Data[0])
     if Len == 2:
         r_x = Pareto_F_Data[0][:]
         r_y = Pareto_F_Data[0][:]
-        for pp in Pop_F_Data:
+        for pi, pp in enumerate(Pop_F_Data):
             plt.scatter(pp[0], pp[1], c='black', s=5)
-        for p in Pareto_F_Data:
+        for pid in Pareto_F_ID:
+            p = Pop_F_Data[pid]
             if p[0] < r_x[0]:
                 r_x[0] = p[0]
             if p[0] > r_x[1]:
@@ -34,7 +36,9 @@ def draw_MOEAD_Pareto(moead,name):
                 r_y[0] = p[0]
             if p[1] > r_y[1]:
                 r_y[1] = p[1]
-            plt.scatter(p[0], p[1], c='red', s=10)
+            # cc=(np.random.rand(),np.random.rand(),np.random.rand())
+            plt.scatter(p[0], p[1], c='r', s=10)
+            # plt.text(p[0], p[1]+0.2*np.random.rand(), str(pid), fontsize=10)
 
         plt.xlabel('Function 1', fontsize=15)
         plt.ylabel('Function 2', fontsize=15)
@@ -55,6 +59,8 @@ def draw_MOEAD_Pareto(moead,name):
         # ax.set_xlim([0,2])
         # ax.set_ylim([0,2])
         # ax.set_zlim([0,2])
+
+
 def draw_W(moead):
     Start_Pts = moead.Z
     path = moead.csv_file_path + '/' + moead.name + '.csv'

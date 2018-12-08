@@ -6,6 +6,7 @@ import src.Draw_Utils as draw_utils
 遗传算法工具包
 '''
 
+
 def Creat_child(moead):
     child = moead.Test_fun.Bound[0] + (moead.Test_fun.Bound[1] - moead.Test_fun.Bound[0]) * np.random.rand(
         moead.Test_fun.Dimention)
@@ -26,21 +27,55 @@ def Creat_Pop(moead):
     return Pop, Pop_FV
 
 
-def mutate(var_num, p1):
+def mutate(moead, p1):
+    var_num = moead.Test_fun.Dimention
     for i in range(int(var_num * 0.1)):
+        d = moead.Test_fun.Bound[0] + (moead.Test_fun.Bound[1] - moead.Test_fun.Bound[0]) * np.random.rand()
+        d = d * np.random.randint(-1, 1)
+        d = d / 10
         j = np.random.randint(0, var_num, size=1)[0]
-        d = np.random.randint(0, var_num, size=1)[0]
-        p1[j] = p1[d]
+        p1[j] = p1[j] + d
     return p1
 
 
-def crossover_pop(var_num, pop1, pop2):
+def mutate2(moead, y1):
+    dj = 0
+    uj = np.random.rand()
+    if uj < 0.5:
+        dj = (2 * uj) ** (1 / 6) - 1
+    else:
+        dj = 1 - 2 * (1 - uj) ** (1 / 6)
+    y1 = y1 + dj
+    y1[y1 > moead.Test_fun.Bound[1]] = moead.Test_fun.Bound[1]
+    y1[y1 < moead.Test_fun.Bound[0]] = moead.Test_fun.Bound[0]
+    return y1
+
+
+def crossover(moead, pop1, pop2):
+    var_num = moead.Test_fun.Dimention
     r1 = int(var_num * np.random.rand())
     if np.random.rand() < 0.5:
         pop1[:r1], pop2[:r1] = pop2[:r1], pop1[:r1]
     else:
         pop1[r1:], pop2[r1:] = pop2[r1:], pop1[r1:]
     return pop1, pop2
+
+
+def crossover2(moead, y1, y2):
+    var_num = moead.Test_fun.Dimention
+    yj = 0
+    uj = np.random.rand()
+    if uj < 0.5:
+        yj = (2 * uj) ** (1 / 3)
+    else:
+        yj = (1 / (2 * (1 - uj))) ** (1 / 3)
+    y1 = 0.5 * (1 + yj) * y1 + (1 - yj) * y2
+    y2 = 0.5 * (1 - yj) * y1 + (1 + yj) * y2
+    y1[y1 > moead.Test_fun.Bound[1]] = moead.Test_fun.Bound[1]
+    y1[y1 < moead.Test_fun.Bound[0]] = moead.Test_fun.Bound[0]
+    y2[y2 > moead.Test_fun.Bound[1]] = moead.Test_fun.Bound[1]
+    y2[y2 < moead.Test_fun.Bound[0]] = moead.Test_fun.Bound[0]
+    return y1, y2
 
 
 def EO(moead, wi, p1):
@@ -65,23 +100,12 @@ def cross_mutation(moead, p1, p2):
     y1 = np.copy(p1)
     y2 = np.copy(p2)
     c_rate = 1
-    m_rate = 0.1
-
+    m_rate = 0.5
     if np.random.rand() < c_rate:
-        y1, y2 = crossover_pop(moead.Test_fun.Dimention, y1, y2)
+        y1, y2 = crossover2(moead, y1, y2)
     if np.random.rand() < m_rate:
-        dj = 0
-        uj = np.random.rand()
-        if uj < 0.5:
-            dj = (2 * uj) ** (1 / 6) - 1
-        else:
-            dj = 1 - 2 * (1 - uj) ** (1 / 6)
-        y1 = y1 + dj
-        y2 = y2 + dj
-        y1[y1 > moead.Test_fun.Bound[1]] = moead.Test_fun.Bound[1]
-        y1[y1 < moead.Test_fun.Bound[0]] = moead.Test_fun.Bound[0]
-        y2[y2 > moead.Test_fun.Bound[1]] = moead.Test_fun.Bound[1]
-        y2[y2 < moead.Test_fun.Bound[0]] = moead.Test_fun.Bound[0]
+        y1 = mutate2(moead, y1)
+        y2 = mutate2(moead, y2)
     return y1, y2
 
 
@@ -90,7 +114,7 @@ def generate_next(moead, gen, wi, p0, p1, p2):
     qbxf_p1 = moead_utils.cpt_tchbycheff(moead, wi, p1)
     qbxf_p2 = moead_utils.cpt_tchbycheff(moead, wi, p2)
     n_p0, n_p1, n_p2 = np.copy(p0), np.copy(p1), np.copy(p2)
-    if gen % 50 == 0:
+    if gen < 1:
         n_p0 = EO(moead, wi, n_p0)
         n_p1 = EO(moead, wi, n_p1)
         n_p2 = EO(moead, wi, n_p2)
@@ -103,18 +127,14 @@ def generate_next(moead, gen, wi, p0, p1, p2):
     qbxf_np2 = moead_utils.cpt_tchbycheff(moead, wi, n_p2)
 
     qbxf = np.array([qbxf_p0, qbxf_p1, qbxf_p2, qbxf_np0, qbxf_np1, qbxf_np2])
-    mins = np.argmin(qbxf)
-    Y = [p0, p1, p2, n_p0, n_p1, n_p2][mins]
+    best = np.argmin(qbxf)
+    Y = [p0, p1, p2, n_p0, n_p1, n_p2][best]
     return Y
 
 
 def envolution(moead):
     for gen in range(moead.max_gen):
         moead.gen = gen
-        # if gen % 100 == 0:
-        #     moead.need_dinamic = True
-        # else:
-        #     moead.need_dinamic = False
         for pi, p in enumerate(moead.Pop):
             # 第pi个个体的邻居集
             Bi = moead.W_Bi_T[pi]
@@ -128,21 +148,23 @@ def envolution(moead):
             Xl = moead.Pop[il]
             Y = generate_next(moead, gen, pi, Xi, Xk, Xl)
             cbxf_i = moead_utils.cpt_tchbycheff(moead, pi, Xi)
+            cbxf_k = moead_utils.cpt_tchbycheff(moead, pi, Xk)
+            cbxf_l = moead_utils.cpt_tchbycheff(moead, pi, Xl)
             cbxf_y = moead_utils.cpt_tchbycheff(moead, pi, Y)
-            d = 0.001
-            if cbxf_y < cbxf_i:
-                moead.Pop[pi][:] = Y[:]
+
+            d = 0.01
+            if cbxf_y < cbxf_i or (cbxf_y < cbxf_k) or (cbxf_y < cbxf_l):
                 F_Y = moead.Test_fun.Func(Y)[:]
-                moead.Pop_FV[pi][:] = F_Y
                 moead_utils.update_EP_By_ID(moead, pi, F_Y)
                 moead_utils.update_Z(moead, Y)
                 moead_utils.update_BTX(moead, Bi, Y)
-                if abs(cbxf_y - cbxf_i) > d:
+                if abs(cbxf_y - cbxf_i) > d or (abs(cbxf_y - cbxf_k) > d) or (abs(cbxf_y - cbxf_l) > d):
                     moead_utils.update_EP_By_Y(moead, pi)
+
         if moead.need_dinamic:
             draw_utils.plt.cla()
             # draw_utils.draw_W(moead)
             draw_utils.draw_MOEAD_Pareto(moead, moead.name + "第：" + str(gen) + "")
-            draw_utils.plt.pause(0.0001)
-        print('gen %s,EP size :%s' % (gen, len(moead.EP_X_ID)))
+            draw_utils.plt.pause(0.001)
+        print('gen %s,EP size :%s,Z:%s' % (gen, len(moead.EP_X_ID), moead.Z))
     return moead.EP_X_ID

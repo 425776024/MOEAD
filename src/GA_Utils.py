@@ -114,7 +114,7 @@ def generate_next(moead, gen, wi, p0, p1, p2):
     qbxf_p1 = moead_utils.cpt_tchbycheff(moead, wi, p1)
     qbxf_p2 = moead_utils.cpt_tchbycheff(moead, wi, p2)
     n_p0, n_p1, n_p2 = np.copy(p0), np.copy(p1), np.copy(p2)
-    if gen < 1:
+    if gen %20==0:
         n_p0 = EO(moead, wi, n_p0)
         n_p1 = EO(moead, wi, n_p1)
         n_p2 = EO(moead, wi, n_p2)
@@ -129,6 +129,20 @@ def generate_next(moead, gen, wi, p0, p1, p2):
     qbxf = np.array([qbxf_p0, qbxf_p1, qbxf_p2, qbxf_np0, qbxf_np1, qbxf_np2])
     best = np.argmin(qbxf)
     Y = [p0, p1, p2, n_p0, n_p1, n_p2][best]
+    return Y
+
+
+def generate_next_DE(moead, wi, p0, p1, p2):
+    qbxf_p0 = moead_utils.cpt_tchbycheff(moead, wi, p0)
+    qbxf_p1 = moead_utils.cpt_tchbycheff(moead, wi, p1)
+    qbxf_p2 = moead_utils.cpt_tchbycheff(moead, wi, p2)
+    Y = 0.3 * p0 + 0.7 * (p2 - p1)
+    Y[Y > moead.Test_fun.Bound[1]] = moead.Test_fun.Bound[1]
+    Y[Y < moead.Test_fun.Bound[0]] = moead.Test_fun.Bound[0]
+    qbxf_y = moead_utils.cpt_tchbycheff(moead, wi, Y)
+    qbxf = np.array([qbxf_p0, qbxf_p1, qbxf_p2, qbxf_y])
+    best = np.argmin(qbxf)
+    Y = [p0, p1, p2, Y][best]
     return Y
 
 
@@ -148,20 +162,20 @@ def envolution(moead):
             Xl = moead.Pop[il]
             Y = generate_next(moead, gen, pi, Xi, Xk, Xl)
             cbxf_i = moead_utils.cpt_tchbycheff(moead, pi, Xi)
-            cbxf_k = moead_utils.cpt_tchbycheff(moead, pi, Xk)
-            cbxf_l = moead_utils.cpt_tchbycheff(moead, pi, Xl)
+            # cbxf_k = moead_utils.cpt_tchbycheff(moead, pi, Xk)
+            # cbxf_l = moead_utils.cpt_tchbycheff(moead, pi, Xl)
             cbxf_y = moead_utils.cpt_tchbycheff(moead, pi, Y)
 
-            d = 0.01
-            if cbxf_y < cbxf_i or (cbxf_y < cbxf_k) or (cbxf_y < cbxf_l):
+            d = 0.001
+            if cbxf_y < cbxf_i:
                 F_Y = moead.Test_fun.Func(Y)[:]
                 moead_utils.update_EP_By_ID(moead, pi, F_Y)
                 moead_utils.update_Z(moead, Y)
-                moead_utils.update_BTX(moead, Bi, Y)
-                if abs(cbxf_y - cbxf_i) > d or (abs(cbxf_y - cbxf_k) > d) or (abs(cbxf_y - cbxf_l) > d):
+                if abs(cbxf_y - cbxf_i) > d:
                     moead_utils.update_EP_By_Y(moead, pi)
+            moead_utils.update_BTX(moead, Bi, Y)
 
-        if moead.need_dinamic:
+        if moead.need_dynamic:
             draw_utils.plt.cla()
             # draw_utils.draw_W(moead)
             draw_utils.draw_MOEAD_Pareto(moead, moead.name + "第：" + str(gen) + "")

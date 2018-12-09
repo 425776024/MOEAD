@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f800aaef-0638-4919-88cc-8a45a3a11ea4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Draw_Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Draw_Utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GA_Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/GA_Utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MOEAD_Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/MOEAD_Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MOEAD_Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/MOEAD_Utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vector_csv_file/zdt1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/vector_csv_file/zdt1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vector_csv_file/zdt2.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,14 +16,14 @@
     <session id="-1032117867">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="34" />
+          <entry key="project.closed" value="36" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="7" />
-          <entry key="project.open.time.4" value="18" />
-          <entry key="project.open.time.5" value="4" />
-          <entry key="project.opened" value="34" />
+          <entry key="project.open.time.4" value="19" />
+          <entry key="project.open.time.5" value="6" />
+          <entry key="project.opened" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -55,24 +51,24 @@
         <counts>
           <entry key="csv" value="4" />
           <entry key="dummy" value="9" />
-          <entry key="py" value="12123" />
+          <entry key="py" value="12201" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="13" />
-          <entry key="Python" value="12123" />
+          <entry key="Python" value="12201" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MOEAD_Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="753">
-              <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+            <state relative-caret-position="149">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -83,26 +79,36 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MOEAD_Utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="25" />
+            <state relative-caret-position="183">
+              <caret line="166" column="13" lean-forward="true" selection-start-line="166" selection-start-column="13" selection-end-line="166" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GA_Utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+            <state relative-caret-position="734">
+              <caret line="168" column="21" selection-start-line="168" selection-start-column="21" selection-end-line="168" selection-end-column="21" />
               <folding>
                 <element signature="e#94#109#1" />
                 <element signature="e#140#294#0" />
                 <element signature="e#323#630#0" />
                 <element signature="e#383#428#0" />
                 <element signature="e#475#565#0" />
+                <element signature="e#660#996#0" />
+                <element signature="e#743#982#0" />
+                <element signature="e#1027#1321#0" />
                 <element signature="e#1362#1604#0" />
-                <element signature="e#1276#1932#0" />
-                <element signature="e#3399#4933#0" />
+                <element signature="e#1642#2178#0" />
+                <element signature="e#2208#2864#0" />
+                <element signature="e#2414#2845#0" />
+                <element signature="e#2790#2845#0" />
+                <element signature="e#2906#3168#0" />
+                <element signature="e#3095#3150#0" />
+                <element signature="e#3222#4013#0" />
+                <element signature="e#3471#3567#0" />
+                <element signature="e#4065#4566#0" />
               </folding>
             </state>
           </provider>
@@ -119,7 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Pop</find>
       <find>cpt_EP</find>
       <find>cro</find>
       <find>cros</find>
@@ -149,11 +154,13 @@
       <find>next</find>
       <find>EO</find>
       <find>dz</find>
+      <find>y1</find>
     </findStrings>
     <replaceStrings>
       <replace>moead.Test_fun.</replace>
       <replace>moead</replace>
       <replace>dz</replace>
+      <replace>Y</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -193,13 +200,13 @@
         <option value="$PROJECT_DIR$/src/vector_csv_file/zdt2.csv" />
         <option value="$PROJECT_DIR$/src/vector_csv_file/zdt1.csv" />
         <option value="$PROJECT_DIR$/src/Draw_Utils.py" />
-        <option value="$PROJECT_DIR$/src/MOEAD_Main.py" />
         <option value="$PROJECT_DIR$/src/MOEAD_Utils.py" />
+        <option value="$PROJECT_DIR$/src/MOEAD_Main.py" />
         <option value="$PROJECT_DIR$/src/GA_Utils.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="65" />
     <option name="y" value="25" />
     <option name="width" value="1855" />
@@ -422,13 +429,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37131366" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.38739946" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.31586403" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.31586403" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49865952" weight="0.5311615" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -667,36 +675,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GA_Utils.py">
+    <entry file="file://$PROJECT_DIR$/src/MOEAD_Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+        <state relative-caret-position="149">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
           <folding>
-            <element signature="e#94#109#1" />
-            <element signature="e#140#294#0" />
-            <element signature="e#323#630#0" />
-            <element signature="e#383#428#0" />
-            <element signature="e#475#565#0" />
-            <element signature="e#1362#1604#0" />
-            <element signature="e#1276#1932#0" />
-            <element signature="e#3399#4933#0" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MOEAD_Utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="25" />
+        <state relative-caret-position="183">
+          <caret line="166" column="13" lean-forward="true" selection-start-line="166" selection-start-column="13" selection-end-line="166" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MOEAD_Main.py">
+    <entry file="file://$PROJECT_DIR$/src/GA_Utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="753">
-          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        <state relative-caret-position="734">
+          <caret line="168" column="21" selection-start-line="168" selection-start-column="21" selection-end-line="168" selection-end-column="21" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#94#109#1" />
+            <element signature="e#140#294#0" />
+            <element signature="e#323#630#0" />
+            <element signature="e#383#428#0" />
+            <element signature="e#475#565#0" />
+            <element signature="e#660#996#0" />
+            <element signature="e#743#982#0" />
+            <element signature="e#1027#1321#0" />
+            <element signature="e#1362#1604#0" />
+            <element signature="e#1642#2178#0" />
+            <element signature="e#2208#2864#0" />
+            <element signature="e#2414#2845#0" />
+            <element signature="e#2790#2845#0" />
+            <element signature="e#2906#3168#0" />
+            <element signature="e#3095#3150#0" />
+            <element signature="e#3222#4013#0" />
+            <element signature="e#3471#3567#0" />
+            <element signature="e#4065#4566#0" />
           </folding>
         </state>
       </provider>

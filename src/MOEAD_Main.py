@@ -20,8 +20,8 @@ class MOEAD:
     Test_fun = zdt2
     name = 'zdt2'
     Pop_size = -1
-    max_gen = 30
-    T_size =20
+    max_gen = 50
+    T_size =5
     # popsize
     h = 100
     # m = 2
@@ -39,8 +39,8 @@ class MOEAD:
     # 当前迭代代数
     gen = 0
     # 是否动态展示
-    need_dinamic = False
-    # need_dinamic=True
+    need_dynamic = False
+    # need_dynamic=True
 
     def __init__(self):
         self.Init_data()

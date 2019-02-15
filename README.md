@@ -1,5 +1,5 @@
 对**[MOEA/D: A Multiobjective Evolutionary Algorithm Based on Decomposition](https://ieeexplore.ieee.org/document/4358754)**论文中算法编程实现。
-
+原论文使用的是DE,我这里用的是GA\EO的一些思想取替换DE,GA与DE原理一样,因此不影响。
 [GitHub链接：https://github.com/425776024/MOEAD](https://github.com/425776024/MOEAD)
 
 **结构：**

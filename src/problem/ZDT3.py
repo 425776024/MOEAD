@@ -10,11 +10,9 @@ Bound = [0, 1]
 
 
 def Func(X):
-    if X.shape[0] < 2:
-        return -1
     f1 = F1(X)
-    ag = g(X)
-    f2 = F2(ag, X)
+    gx = g(X)
+    f2 = F2(gx, X)
     return [f1, f2]
 
 
@@ -23,8 +21,8 @@ def F1(X):
 
 
 def F2(gx, X):
-    x = X[0]
-    f2 = gx * (1 - np.square(x / gx))
+    x1 = X[0]
+    f2 = gx * (1 - np.sqrt(x1 / gx) - (x1 / gx) * np.sin(10 * np.pi * x1))
     return f2
 
 

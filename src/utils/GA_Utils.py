@@ -1,6 +1,6 @@
+import src.utils.MOEAD_Utils as MOEAD_Utils
+import src.utils.Draw_Utils as Draw_Utils
 import numpy as np
-import src.MOEAD_Utils as moead_utils
-import src.Draw_Utils as draw_utils
 
 '''
 遗传算法工具包
@@ -81,16 +81,20 @@ def crossover2(moead, y1, y2):
 def EO(moead, wi, p1):
     m = p1.shape[0]
     tp_best = np.copy(p1)
-    qbxf_tp = moead_utils.cpt_tchbycheff(moead, wi, tp_best)
+    qbxf_tp = MOEAD_Utils.cpt_tchbycheff(moead, wi, tp_best)
     Up = np.sqrt(moead.Test_fun.Bound[1] - moead.Test_fun.Bound[0]) / 2
+    h = 0
     for i in range(m):
+        if h == 1:
+            return tp_best
         temp_best = np.copy(p1)
         rd = np.random.normal(0, Up, 1)
         temp_best[i] = temp_best[i] + rd
         temp_best[temp_best > moead.Test_fun.Bound[1]] = moead.Test_fun.Bound[1]
         temp_best[temp_best < moead.Test_fun.Bound[0]] = moead.Test_fun.Bound[0]
-        qbxf_te = moead_utils.cpt_tchbycheff(moead, wi, temp_best)
+        qbxf_te = MOEAD_Utils.cpt_tchbycheff(moead, wi, temp_best)
         if qbxf_te < qbxf_tp:
+            h = 1
             qbxf_tp = qbxf_te
             tp_best[:] = temp_best[:]
     return tp_best
@@ -110,40 +114,39 @@ def cross_mutation(moead, p1, p2):
 
 
 def generate_next(moead, gen, wi, p0, p1, p2):
-    qbxf_p0 = moead_utils.cpt_tchbycheff(moead, wi, p0)
-    qbxf_p1 = moead_utils.cpt_tchbycheff(moead, wi, p1)
-    qbxf_p2 = moead_utils.cpt_tchbycheff(moead, wi, p2)
+    qbxf_p0 = MOEAD_Utils.cpt_tchbycheff(moead, wi, p0)
+    qbxf_p1 = MOEAD_Utils.cpt_tchbycheff(moead, wi, p1)
+    qbxf_p2 = MOEAD_Utils.cpt_tchbycheff(moead, wi, p2)
+
+    qbxf = np.array([qbxf_p0, qbxf_p1, qbxf_p2])
+    best = np.argmin(qbxf)
+    Y1 = [p0, p1, p2][best]
+
     n_p0, n_p1, n_p2 = np.copy(p0), np.copy(p1), np.copy(p2)
-    if gen %20==0:
-        n_p0 = EO(moead, wi, n_p0)
-        n_p1 = EO(moead, wi, n_p1)
-        n_p2 = EO(moead, wi, n_p2)
+
+    if gen % 10 == 0:
+        if np.random.rand() < 0.1:
+            n_p0 = EO(moead, wi, n_p0)
 
     n_p0, n_p1 = cross_mutation(moead, n_p0, n_p1)
     n_p1, n_p2 = cross_mutation(moead, n_p1, n_p2)
-
-    qbxf_np0 = moead_utils.cpt_tchbycheff(moead, wi, n_p0)
-    qbxf_np1 = moead_utils.cpt_tchbycheff(moead, wi, n_p1)
-    qbxf_np2 = moead_utils.cpt_tchbycheff(moead, wi, n_p2)
+    qbxf_np0 = MOEAD_Utils.cpt_tchbycheff(moead, wi, n_p0)
+    qbxf_np1 = MOEAD_Utils.cpt_tchbycheff(moead, wi, n_p1)
+    qbxf_np2 = MOEAD_Utils.cpt_tchbycheff(moead, wi, n_p2)
 
     qbxf = np.array([qbxf_p0, qbxf_p1, qbxf_p2, qbxf_np0, qbxf_np1, qbxf_np2])
     best = np.argmin(qbxf)
-    Y = [p0, p1, p2, n_p0, n_p1, n_p2][best]
-    return Y
+    Y2 = [p0, p1, p2, n_p0, n_p1, n_p2][best]
 
-
-def generate_next_DE(moead, wi, p0, p1, p2):
-    qbxf_p0 = moead_utils.cpt_tchbycheff(moead, wi, p0)
-    qbxf_p1 = moead_utils.cpt_tchbycheff(moead, wi, p1)
-    qbxf_p2 = moead_utils.cpt_tchbycheff(moead, wi, p2)
-    Y = 0.3 * p0 + 0.7 * (p2 - p1)
-    Y[Y > moead.Test_fun.Bound[1]] = moead.Test_fun.Bound[1]
-    Y[Y < moead.Test_fun.Bound[0]] = moead.Test_fun.Bound[0]
-    qbxf_y = moead_utils.cpt_tchbycheff(moead, wi, Y)
-    qbxf = np.array([qbxf_p0, qbxf_p1, qbxf_p2, qbxf_y])
-    best = np.argmin(qbxf)
-    Y = [p0, p1, p2, Y][best]
-    return Y
+    fm = np.random.randint(0, moead.Test_fun.Func_num)
+    if moead.problem_type == 0 and np.random.rand() < 0.5:
+        FY1 = moead.Test_fun.Func(Y1)
+        FY2 = moead.Test_fun.Func(Y2)
+        if FY2[fm] < FY1[fm]:
+            return Y2
+        else:
+            return Y1
+    return Y2
 
 
 def envolution(moead):
@@ -161,24 +164,24 @@ def envolution(moead):
             Xk = moead.Pop[ik]
             Xl = moead.Pop[il]
             Y = generate_next(moead, gen, pi, Xi, Xk, Xl)
-            cbxf_i = moead_utils.cpt_tchbycheff(moead, pi, Xi)
-            # cbxf_k = moead_utils.cpt_tchbycheff(moead, pi, Xk)
-            # cbxf_l = moead_utils.cpt_tchbycheff(moead, pi, Xl)
-            cbxf_y = moead_utils.cpt_tchbycheff(moead, pi, Y)
+            cbxf_i = MOEAD_Utils.cpt_tchbycheff(moead, pi, Xi)
+            cbxf_y = MOEAD_Utils.cpt_tchbycheff(moead, pi, Y)
 
             d = 0.001
             if cbxf_y < cbxf_i:
+                moead.now_y = pi
                 F_Y = moead.Test_fun.Func(Y)[:]
-                moead_utils.update_EP_By_ID(moead, pi, F_Y)
-                moead_utils.update_Z(moead, Y)
+                MOEAD_Utils.update_EP_By_ID(moead, pi, F_Y)
+                MOEAD_Utils.update_Z(moead, Y)
                 if abs(cbxf_y - cbxf_i) > d:
-                    moead_utils.update_EP_By_Y(moead, pi)
-            moead_utils.update_BTX(moead, Bi, Y)
+                    MOEAD_Utils.update_EP_By_Y(moead, pi)
+            MOEAD_Utils.update_BTX(moead, Bi, Y)
 
         if moead.need_dynamic:
-            draw_utils.plt.cla()
-            # draw_utils.draw_W(moead)
-            draw_utils.draw_MOEAD_Pareto(moead, moead.name + "第：" + str(gen) + "")
-            draw_utils.plt.pause(0.001)
+            Draw_Utils.plt.cla()
+            if moead.draw_w:
+                Draw_Utils.draw_W(moead)
+            Draw_Utils.draw_MOEAD_Pareto(moead, moead.name + "第：" + str(gen) + "")
+            Draw_Utils.plt.pause(0.001)
         print('gen %s,EP size :%s,Z:%s' % (gen, len(moead.EP_X_ID), moead.Z))
     return moead.EP_X_ID

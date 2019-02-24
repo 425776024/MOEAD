@@ -2,7 +2,7 @@ import os
 from math import sqrt
 
 import numpy as np
-from src.Mean_Vector_Util import Mean_vector
+from src.utils.Mean_Vector_Util import Mean_vector
 
 '''
 MOEAD工具包

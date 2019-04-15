@@ -1,3 +1,6 @@
+## 突然感觉这个有好多人通过CSDN来访问，我觉得有必要交代一下，我是为了完成（老板）交代的论文复现，所以赶集写的，代码质量很差，有不能理解的可以加QQ一起沟通
+
+
 对[MOEA/D: A Multiobjective Evolutionary Algorithm Based on Decomposition](https://ieeexplore.ieee.org/document/4358754)论文中算法编程实现。
 
 注：原论文使用的是DE,我这里用的是GA\EO的一些思想取替换DE,GA与DE原理一样,因此不影响

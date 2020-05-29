@@ -1,19 +1,20 @@
-## 突然感觉这个有好多人通过CSDN来访问，我觉得有必要交代一下，我是为了完成（老板）交代的论文复现，所以赶集写的，代码质量很差，有不能理解的可以加QQ一起沟通
+## # MOEAD-python动态+bilibili视频讲解😄
 
-## 麻烦点右上角的star，超过20个，我就重新写一版更清楚的解释😭
+### 突然感觉这个有好多人通过CSDN来访问，我觉得有必要交代一下，我是为了完成（老板）交代的论文复现，所以赶集写的，代码质量很差，有不能理解的可以加QQ一起沟通
+
+## 
 
 对[MOEA/D: A Multiobjective Evolutionary Algorithm Based on Decomposition](https://ieeexplore.ieee.org/document/4358754)论文中算法编程实现。
 
-注：原论文使用的是DE,我这里用的是GA\EO的一些思想取替换DE,GA与DE原理一样,因此不影响
-[GitHub链接：https://github.com/425776024/MOEAD](https://github.com/425776024/MOEAD)
+
 
 MOEAD算法论文大致介绍详细，这个中文的帖子也不错：[https://blog.csdn.net/sinat_33231573/article/details/80271801](https://blog.csdn.net/sinat_33231573/article/details/80271801)
 
 **不过自己实现中发现，坑点至少有2个：**
 1.**如何生成均匀权向量**，这个在**Mean_Vector_Utils.py**文件中已经实现，可以直接用，大致是用一个拔插法的思想，我的另一个帖子也说了下怎么生成的一个效果：[MOEAD算法中均匀权向量的实现---Python](https://blog.csdn.net/jiang425776024/article/details/84528415)。
 2.**如何产生下一代解y**，这个处理的不好几乎做不到论文中那样完美的Pareto前沿面效果，论文中也只是说了一句话：产生新解o(╥﹏╥)o，我这里用了当目标优化的遗传GA加极值优化EO产生下一代，效果尚可，2个30维函数的目标联合优化，只需要100代，1-2秒钟左右即可找到较完美的解，3目标的DTLZ1的pareto前沿形状找的很完美，但是解还是差太多，可是是哪里出了问题。持续改进中。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190215141201213.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ppYW5nNDI1Nzc2MDI0,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190215141234448.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ppYW5nNDI1Nzc2MDI0,size_16,color_FFFFFF,t_70)
+
+
 **代码结构：**
 problem：求解问题函数目录
 vector_csv_file:求解问题的均匀权向量生成目录
@@ -31,7 +32,7 @@ DTLZ1:
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20181204164947831.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ppYW5nNDI1Nzc2MDI0,size_16,color_FFFFFF,t_70)
 
 
-**MOEA/D算法:**
+**MOEA/D算法:（我这只简单介绍，详情网上、paper看，然后再看这代+b站视频，这样会好点。希望能帮到你！）**
 输入: 
 •多目标优化 
 •停止标准;

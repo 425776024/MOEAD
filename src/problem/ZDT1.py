@@ -4,13 +4,15 @@
 
 import numpy as np
 
+# 函数变量维度（目标维度不一致的自行编写目标函数）
 Dimention = 30
+# 函数 目标个数
 Func_num = 2
+# 函数边界
 Bound = [0, 1]
 
 
 def Func(X):
-
     f1 = F1(X)
     gx = g(X)
     f2 = F2(gx, X)

@@ -5,10 +5,14 @@ import numpy as np
 '''
 差分进化算法工具包
 '''
+
+# 交叉率
 Cross_Rate = 0.5
 
 
 def Creat_child(moead):
+    # 创建一个个体
+    # （就是一个向量，长度为Dimention，范围在moead.Test_fun.Bound中设定）
     child = moead.Test_fun.Bound[0] + (moead.Test_fun.Bound[1] - moead.Test_fun.Bound[0]) * np.random.rand(
         moead.Test_fun.Dimention)
     return child

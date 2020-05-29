@@ -20,7 +20,7 @@ MOEAD算法论文大致介绍详细，这个中文的帖子也不错：[https://
 
 确保已经基本了解MOEAD和本代码了
 
-[MOEAD bilibili](https://www.bilibili.com/video/BV1Ap4y1X7NR/)
+[MOEAD bilibili](https://www.bilibili.com/video/BV1Rf4y117Zk/)
 
 
 

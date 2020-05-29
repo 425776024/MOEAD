@@ -14,25 +14,27 @@ MOEAD算法论文大致介绍详细，这个中文的帖子也不错：[https://
 1.**如何生成均匀权向量**，这个在**Mean_Vector_Utils.py**文件中已经实现，可以直接用，大致是用一个拔插法的思想，我的另一个帖子也说了下怎么生成的一个效果：[MOEAD算法中均匀权向量的实现---Python](https://blog.csdn.net/jiang425776024/article/details/84528415)。
 2.**如何产生下一代解y**，这个处理的不好几乎做不到论文中那样完美的Pareto前沿面效果，论文中也只是说了一句话：产生新解o(╥﹏╥)o，我这里用了当目标优化的遗传GA加极值优化EO产生下一代，效果尚可，2个30维函数的目标联合优化，只需要100代，1-2秒钟左右即可找到较完美的解，3目标的DTLZ1的pareto前沿形状找的很完美，但是解还是差太多，可是是哪里出了问题。持续改进中。
 
-
 **代码结构：**
 problem：求解问题函数目录
 vector_csv_file:求解问题的均匀权向量生成目录
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190224120440614.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ppYW5nNDI1Nzc2MDI0,size_16,color_FFFFFF,t_70)
+![](img/category.png)
 ZDT1:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20181204164430456.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ppYW5nNDI1Nzc2MDI0,size_16,color_FFFFFF,t_70)
+![](img/zdt1.png)
 
 ZDT2:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20181204164641860.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ppYW5nNDI1Nzc2MDI0,size_16,color_FFFFFF,t_70)
+![](img/zdt2.png)
 
 ZDT4:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20181204164713350.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ppYW5nNDI1Nzc2MDI0,size_16,color_FFFFFF,t_70)
+![](img/zdt4.png)
 
 DTLZ1:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20181204164947831.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ppYW5nNDI1Nzc2MDI0,size_16,color_FFFFFF,t_70)
+![](img/dtlz1.png)
 
+**MOEA/D算法:**
 
-**MOEA/D算法:（我这只简单介绍，详情网上、paper看，然后再看这代+b站视频，这样会好点。希望能帮到你！）**
+**（我这只简单介绍，详情网上、paper看，然后再看这代+b站视频，这样会好点。希望能帮到你！）**
+
+```
 输入: 
 •多目标优化 
 •停止标准;
@@ -56,3 +58,6 @@ B(i)={i1,...,iT},其中λi1,,..,λiT是λi的最近T权重向量
 步骤2.5) 更新EP：从EP中删除所有被F(y’)支配的向量。如果外部种群 (EP)中没有支配F(y’)的向量，则将F(y’)添加至EP
 步骤3) 停止条件: 如果满足停止条件,则停止和输出EP。否则，重复步骤 2
 在初始化中, B(i)包含λi的T最近向量。我们使用欧几里德距离来测量任何两个权重向量之间的接近程度。因此，λi的最近向量是它自己，其中i∈B(i)。如果j∈B(i),则第j个子问题可以看作是子问题i的近邻。
+
+```
+

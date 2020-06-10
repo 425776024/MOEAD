@@ -1,10 +1,9 @@
-## # MOEAD-python动态+bilibili视频讲解😄
+## MOEAD-python动态+bilibili视频讲解😄
 
-### 突然感觉这个有好多人通过CSDN来访问，我觉得有必要交代一下，我是为了完成（老板）交代的论文复现，所以赶集写的，代码质量很差，有不能理解的可以加QQ一起沟通
+### 有不能理解的可以加QQ一起沟通
 
-## 
 
-对[MOEA/D: A Multiobjective Evolutionary Algorithm Based on Decomposition](https://ieeexplore.ieee.org/document/4358754)论文中算法编程实现。
+本代码是对[MOEA/D: A Multiobjective Evolutionary Algorithm Based on Decomposition](https://ieeexplore.ieee.org/document/4358754)论文中算法编程实现。（也许是：全网第一个python&可视化版本）
 
 
 
@@ -18,7 +17,7 @@ MOEAD算法论文大致介绍详细，这个中文的帖子也不错：[https://
 
 ## bilibili本代码视频
 
-确保已经基本了解MOEAD和本代码了
+（确保）已经基本了解MOEAD和看了本代码了
 
 [MOEAD bilibili](https://www.bilibili.com/video/BV1Rf4y117Zk/)
 

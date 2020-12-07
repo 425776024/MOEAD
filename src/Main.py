@@ -1,5 +1,5 @@
 import time
-
+import numpy as np
 # import src.problem.DTLZ1 as DTLZ1
 import src.problem.KUR as KUR
 # import src.problem.SCH as SCH
@@ -50,10 +50,11 @@ class MOEAD:
     # 当前迭代代数
     gen = 0
     # 是否动态展示
-    # need_dynamic = False
-    need_dynamic = True
+    need_dynamic = False
+    # need_dynamic = True
     # 是否画出权重图
-    draw_w = True
+    # draw_w = True
+    draw_w = False
     # 用于绘图：当前进化种群中，哪个，被，正在 进化。draw_w=true的时候可见
     now_y = []
 
@@ -90,6 +91,6 @@ class MOEAD:
 
 
 if __name__ == '__main__':
-    # np.random.seed(1)
+    np.random.seed(1)
     moead = MOEAD()
     moead.run()

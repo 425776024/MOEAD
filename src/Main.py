@@ -25,7 +25,7 @@ class MOEAD:
     # 种群大小，取决于vector_csv_file/下的xx.csv
     Pop_size = -1
     # 最大迭代次数
-    max_gen = 50
+    max_gen = 30
     # 邻居设定（只会对邻居内的相互更新、交叉）
     T_size = 5
     # 支配前沿ID
@@ -50,8 +50,8 @@ class MOEAD:
     # 当前迭代代数
     gen = 0
     # 是否动态展示
-    need_dynamic = False
-    # need_dynamic = True
+    # need_dynamic = False
+    need_dynamic = True
     # 是否画出权重图
     # draw_w = True
     draw_w = False
@@ -88,6 +88,7 @@ class MOEAD:
         print("支配前沿个体解，的ID（在上面数组：Pop，中的序号）：", EP_X_ID)
         dt = time.time() - t
         self.show()
+        print(dt)
 
 
 if __name__ == '__main__':

@@ -29,7 +29,7 @@ def Creat_Pop(moead):
     return Pop, Pop_FV
 
 
-# def mutate(moead, p1):
+# def mutate(moead, y1):
 #     # 突变个体的策略1
 #     var_num = moead.Test_fun.Dimention
 #     for i in range(int(var_num * 0.1)):
@@ -37,9 +37,11 @@ def Creat_Pop(moead):
 #         d = d * np.random.randint(-1, 1)
 #         d = d / 10
 #         j = np.random.randint(0, var_num, size=1)[0]
-#         p1[j] = p1[j] + d
-#     return p1
-
+#         y1[j] = y1[j] + d
+#     y1[y1 > moead.Test_fun.Bound[1]] = moead.Test_fun.Bound[1]
+#     y1[y1 < moead.Test_fun.Bound[0]] = moead.Test_fun.Bound[0]
+#     return y1
+#
 
 def mutate2(moead, y1):
     # 突变个体的策略2
@@ -55,15 +57,20 @@ def mutate2(moead, y1):
     return y1
 
 
-# def crossover(moead, pop1, pop2):
+# def crossover(moead, y1, y2):
 #     # 交叉个体的策略1
 #     var_num = moead.Test_fun.Dimention
 #     r1 = int(var_num * np.random.rand())
 #     if np.random.rand() < 0.5:
-#         pop1[:r1], pop2[:r1] = pop2[:r1], pop1[:r1]
+#         y1[:r1], y2[:r1] = y2[:r1], y1[:r1]
 #     else:
-#         pop1[r1:], pop2[r1:] = pop2[r1:], pop1[r1:]
-#     return pop1, pop2
+#         y1[r1:], y2[r1:] = y2[r1:], y1[r1:]
+#     y1[y1 > moead.Test_fun.Bound[1]] = moead.Test_fun.Bound[1]
+#     y1[y1 < moead.Test_fun.Bound[0]] = moead.Test_fun.Bound[0]
+#
+#     y2[y2 > moead.Test_fun.Bound[1]] = moead.Test_fun.Bound[1]
+#     y2[y2 < moead.Test_fun.Bound[0]] = moead.Test_fun.Bound[0]
+#     return y1, y2
 
 
 def crossover2(moead, y1, y2):
@@ -175,7 +182,7 @@ def envolution(moead):
                 # 更新函数值到moead.EP_X_FV中。都进化出更好切比雪夫下一代了，自然要更新多目标中的目标的函数值
                 MOEAD_Utils.update_EP_By_ID(moead, pi, F_Y)
                 # 都进化出更好切比雪夫下一代了，有可能有更好的理想点，尝试更新理想点
-                MOEAD_Utils.update_Z(moead, Y)
+                # MOEAD_Utils.update_Z(moead, Y)
                 if abs(cbxf_y - cbxf_i) > d:
                     # 超过d才更新。更新支配前沿。红色点那些
                     MOEAD_Utils.update_EP_By_Y(moead, pi)

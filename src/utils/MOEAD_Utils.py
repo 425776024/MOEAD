@@ -40,20 +40,20 @@ def cpt_Z(moead):
     return Z
 
 
-def cpt_Z2(moead):
-    # 初始化Z集，最小问题0,0，..
-    Z = moead.Pop_FV[0][:]
-    dz = np.random.rand()
-    for fi in range(moead.Test_fun.Func_num):
-        for Fpi in moead.Pop_FV:
-            if moead.problem_type == 0:
-                if Fpi[fi] < Z[fi]:
-                    Z[fi] = Fpi[fi] - dz
-            if moead.problem_type == 1:
-                if Fpi[fi] > Z[fi]:
-                    Z[fi] = Fpi[fi] + dz
-    moead.Z = Z
-    return Z
+# def cpt_Z2(moead):
+#     # 初始化Z集，最小问题0,0，..
+#     Z = moead.Pop_FV[0][:]
+#     dz = np.random.rand()
+#     for fi in range(moead.Test_fun.Func_num):
+#         for Fpi in moead.Pop_FV:
+#             if moead.problem_type == 0:
+#                 if Fpi[fi] < Z[fi]:
+#                     Z[fi] = Fpi[fi] - dz
+#             if moead.problem_type == 1:
+#                 if Fpi[fi] > Z[fi]:
+#                     Z[fi] = Fpi[fi] + dz
+#     moead.Z = Z
+#     return Z
 
 
 # 计算初始化前沿

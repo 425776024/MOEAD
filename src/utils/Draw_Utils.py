@@ -43,8 +43,8 @@ def draw_MOEAD_Pareto(moead, name):
         plt.xlabel('Function 1', fontsize=15)
         plt.ylabel('Function 2', fontsize=15)
         plt.title(name)
-        # plt.xlim(r_x[0] - 0.1, r_x[1] + 0.1)
-        # plt.ylim(r_y[0] - 0.1, r_y[1] + 0.1)
+        plt.xlim(r_x[0] - 0.1, r_x[1] + 0.1)
+        plt.ylim(r_y[0] - 0.1, r_y[1] + 0.1)
     # if Len == 3:
         # global ax, fig
         # if ax == 0:

@@ -15,9 +15,9 @@ class MOEAD:
     problem_type = 0
     # problem_type=1
     # 测试函数
-    Test_fun = ZDT1
+    Test_fun = ZDT3
     # 动态展示的时候的title名称
-    name = 'ZDT1'
+    name = 'ZDT3'
     # 使用那种方式、DE/GA 作为进化算法
     # GA_DE_Utils = Utils.DE_Utils
     GA_DE_Utils = Utils.GA_Utils
@@ -25,7 +25,7 @@ class MOEAD:
     # 种群大小，取决于vector_csv_file/下的xx.csv
     Pop_size = -1
     # 最大迭代次数
-    max_gen = 30
+    max_gen = 100
     # 邻居设定（只会对邻居内的相互更新、交叉）
     T_size = 5
     # 支配前沿ID
@@ -50,8 +50,8 @@ class MOEAD:
     # 当前迭代代数
     gen = 0
     # 是否动态展示
-    # need_dynamic = False
-    need_dynamic = True
+    need_dynamic = False
+    # need_dynamic = True
     # 是否画出权重图
     # draw_w = True
     draw_w = False
